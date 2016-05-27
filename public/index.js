@@ -137,15 +137,16 @@ Ajax.prototype.sendPost = function (opts) {
         }
     });
 };
+
 var ajax = new Ajax();
 ajax.sendPost({
     url: '/tu/finish',
     params: {
-        count: 30
+        DOMContentLoaded: new Date().getTime()
     },
     timeout: 15000,
     success: function (data) {
-
+        window.location.reload();
     },
     failure: function (data, textStatus, jqXHR) {
 
