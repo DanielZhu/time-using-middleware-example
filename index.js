@@ -83,7 +83,7 @@ app.use(function (req, res, next) {
 var measureUrlPatterns = [
     {
         pattern: /^\/test.*performance-testing$/,
-        pageName: 'timeUsingTestPage'
+        pageName: 'testDemoPage'
     },
     {
         pattern: /^\/app\/announcement.*performance-testing$/,
@@ -134,7 +134,6 @@ function timeUsingCollectFinish(req, res, next) {
 
     if (req.cookies.mtKey) {
         data.mtKey = req.cookies.mtKey;
-        console.log(data.mtKey);
         timeUsing.finishRecording(res, data, {
             success: function () {
                 res.send({code: 200});

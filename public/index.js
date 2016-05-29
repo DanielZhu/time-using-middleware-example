@@ -1,5 +1,3 @@
-console.log('lll');
-
 /**
  * @file Ajax Lib
  *
