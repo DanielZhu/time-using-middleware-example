@@ -35,32 +35,36 @@ GET /test?performance-testing - - ms - -
 
 #### Get the reports
 
-`timeUsing -i ./log/timeUsing/ -c ./timeUsing.json `
-
-Report in CL below:
-
+``` sh
+timeUsing -i ./log/timeUsing/ -c ./timeUsing.json -f html,pdf
 ```
 
+### HTML Report Preview
+
+![HTML Report](http://staydan.com/sweet/homePage/preImgs/time.using.middleware/html.png)
+
+### Command Line Report Preview
+
+``` md
 -------------------------------------------------
-       Time Using Middleware by Staydan.com      
-                                                 
-   Collect Data & Analyze Logs & Export Reports  
+      Time Using Middleware by Staydan.com       
+
+                                    v0.4.3     
 -------------------------------------------------
 
-
-17ms -  analyzing log data finished...
+30ms -  analyzing log data finished...
 contain pages counts: 2
- Analyzing For [ timeUsingTestPage ]      
+ Analyzing For [ timeUsingTestPage ]
 validSampleCounts: 1156
 
-20ms - assembling data...
+42ms - assembling data...
 samples counts for PAGE [ timeUsingTestPage ] : 1156 / 1156 (valid / sum)
- Analyzing For [ testDemoPage ]      
+ Analyzing For [ testDemoPage ]
 validSampleCounts: 7159
 
-46ms - assembling data...
+109ms - assembling data...
 samples counts for PAGE [ testDemoPage ] : 7159 / 7159 (valid / sum)
-0ms - preparing the table data...
+6ms - preparing the table data...
 
 ------- Performance Testing Results -------
 
@@ -73,8 +77,8 @@ Page : timeUsingTestPage
 | FirstScreen Dom |     1156     |    1060.3   |   1072.5   |    37   |   2585  |
 
 
-2ms - finish render data
-0ms - preparing the table data...
+0ms - finish render data
+4ms - preparing the table data...
 
 ------- Performance Testing Results -------
 
@@ -88,6 +92,13 @@ Page : testDemoPage
 
 
 1ms - finish render data
+Exporting file in HTML finished
+
+-------------------------------------------------
+       Time Using Middleware by Staydan.com      
+
+   Collect Data & Analyze Logs & Export Reports  
+-------------------------------------------------
 ```
 
 ## Features
